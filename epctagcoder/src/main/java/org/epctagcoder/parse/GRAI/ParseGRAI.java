@@ -163,8 +163,8 @@ public class ParseGRAI {
 		bin.append( Converter.decToBin(tagSize.getHeader(), 8) );
 		bin.append( Converter.decToBin(filterValue.getValue(), 3) );
 		bin.append( Converter.decToBin(tableItem.getPartitionValue(), 3) );
-		bin.append( Converter.decToBin(Integer.parseInt(companyPrefix), tableItem.getM()) );
-		bin.append( Converter.decToBin(Integer.parseInt(assetType), tableItem.getN()) );
+		bin.append( Converter.decToBin(companyPrefix, tableItem.getM()) );
+		bin.append( Converter.decToBin(assetType, tableItem.getN()) );
 
 		if (tagSize.getValue()==170) {		
 			bin.append( Converter.fill(Converter.StringtoBinary(serial, 7), tagSize.getSerialBitCount()+remainder) );   
